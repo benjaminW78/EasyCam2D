@@ -6,41 +6,41 @@
 *HOW TO INSTANTIATE Easy2DCamera : 
 	
 	* var whatYouWant = new Easy2DCamera(first,second,third)	--> first :  your dom object canvas reference.
-																																	  ---------------------------------------------------------------------------------------					
-														   		--> second : object who reference to space informations of  camera.   |		Keys    	|		value Type	|		Obligatoire		|		Exemples		|
-																																	  _______________________________________________________________________________________
-																																	  |	pointReferenceX	|		Number		|			Yes			|			256			|	
-																																	  ---------------------------------------------------------------------------------------
-																																	  |	pointReferenceY	|		Number		|			Yes			|			80			|
-																																	  ---------------------------------------------------------------------------------------					
-																																	  |		worldX		|		Number		|			Yes			|			600			|
-																																	  ---------------------------------------------------------------------------------------					
-																																	  |		worldY		|		Number		|			Yes			|			455,5		|
-																																	  ---------------------------------------------------------------------------------------					
-																																	  |		vueWidth	|		Number		|			No			|			1024		|
-																																	  ---------------------------------------------------------------------------------------					
-																																	  |		vueHeight	|		Number		|			No			|			768			|
-																																	  ---------------------------------------------------------------------------------------					
-																-->	third : object who containe all datas of camera scrolling 		-----------------------------------------------------------------------------------------
-																																	|		Keys    	|		value Type 	|		Obligatoire		|		Exemples		|
-																																	_________________________________________________________________________________________
-																																	|		left		|		Object		|			No			|						|
-																																	-----------------------------------------------------------------						-
-																																	|		right		|		Object		|			No			|						|
-																																	-----------------------------------------------------------------{min:number,max:Number}-
-																																	|		up			|		Object		|			No			|						|
-																																	-----------------------------------------------------------------						-
-																																	|		down		|		Object		|			No			|						|
-																																	-----------------------------------------------------------------------------------------
-																																	|		speed		|		Number		|			No			|			20			|
-																																	-----------------------------------------------------------------------------------------
+																									 ---------------------------------------------------------------------------------------					
+														   		--> second : object who reference to space informations of  camera.   	|	Keys    	|	value Type	|Obligatoire	|	Exemples	|
+																									  _______________________________________________________________________________________
+																									|	pointReferenceX	|	Number		|	Yes	|	256		|	
+																									 ---------------------------------------------------------------------------------------
+																									|	pointReferenceY	|	Number		|	Yes	|	80		|
+																									 ---------------------------------------------------------------------------------------					
+																									|	worldX		|	Number		|	Yes	|	600		|
+																									 ---------------------------------------------------------------------------------------					
+																									|	worldY		|	Number		|	Yes	|	455,5		|
+																									 ---------------------------------------------------------------------------------------					
+																									|	vueWidth	|	Number		|	No	|	1024		|
+																									 ---------------------------------------------------------------------------------------					
+																									|	vueHeight	|	Number		|	No	|	768		|
+																									---------------------------------------------------------------------------------------					
+																-->	third : object who containe all datas of camera scrolling 	-----------------------------------------------------------------------------------------
+																									|		Keys    	|		value Type 	|Obligatoire	|Exemples|
+																									_________________________________________________________________________________________
+																									|		left		|		Object		|	No	|	|
+																									-----------------------------------------------------------------------------------------
+																									|		right		|		Object		|	No	|	|
+																									-----------------------------------------------------------------{min:number,max:Number}-
+																									|		up		|		Object		|	No	|	|
+																									----------------------------------------------------------------------------------------
+																									|		down		|		Object		|	No	|	|
+																									-----------------------------------------------------------------------------------------
+																									|		speed		|		Number		|	No	|20	|
+																									-----------------------------------------------------------------------------------------
 																																				
 			
 
 **Methodes of Easy2DCamera : 
 
 *	run(first) 1 param necessary 							 --> first : object who containe one y and x or  an object who had 
-															 			a key pos who contain x and y like that : object.pos = {x :56, y:10);	
+													a key pos who contain x and y like that : object.pos = {x :56, y:10);	
 	USE : call this method into your gameloop for run the camera with all parameter set before ;
 
 
@@ -51,37 +51,37 @@
 
 
 *	setNewPointsReference(first) 1 param necessary	 		--> first : object who containe 2 keys .	-------------------------------------------------------------------------------------
-																										|		Keys   	|		value Type	|		Obligatoire		|		Exemples		|
-		Case of success  : return true																	_____________________________________________________________________________________		
-		Case of failure : return false																	|		x		|		number		|			No			|			25			|
-																										-------------------------------------------------------------------------------------
-																										|		y		|		number		|			No			|			35			|
-																										-------------------------------------------------------------------------------------	
+															|	Keys   	|value Type	|Obligatoire	|	Exemples		|
+		Case of success  : return true										_____________________________________________________________________________________		
+		Case of failure : return false										|	x	|number		|	No	|	25			|
+															------------------------------------------------------------------------------------
+															|	y	|number		|	No	|	35			|
+															-------------------------------------------------------------------------------------	
 	USE : 	call this method for set news coordinates to reference point of your camera;					
 																												
 																											
 *	setNewWorldPositions(first) 1 param necessary	 		--> first : object who containe 2 keys .	-------------------------------------------------------------------------------------
-																										|		Keys   	|		value Type	|		Obligatoire		|		Exemples		|
-	Case of success  : return true																		_____________________________________________________________________________________		
-	Case of failure : return false																		|		x		|		number		|			No			|			255			|
-																										-------------------------------------------------------------------------------------
-																										|		y		|		number		|			No			|			75			|
-																										-------------------------------------------------------------------------------------	
+															|		Keys   	|		value Type	|		Obligatoire		|		Exemples		|
+	Case of success  : return true											_____________________________________________________________________________________		
+	Case of failure : return false											|		x		|		number		|			No			|			255			|
+															------------------------------------------------------------------------------------
+															|		y		|		number		|			No			|			75			|
+															-------------------------------------------------------------------------------------	
 	USE : 	call this method for set news coordinates to reference point of your camera;					
 																																																																															
 																																				 
 	
 
 *	setScrollingDirection(first,second) 2 params necessary 	--> first :  string of the direction to set . Possibility : left,right,down,up ;
-															--> second : object who containe values to change or set  : -------------------------------------------------------------------------------------
-	Case of success  : return true																						|		Keys   	|		value Type	|		Obligatoire		|		Exemples		|
+															--> second : object who containe values to change or set  : 				-------------------------------------------------------------------------------------
+	Case of success  : return true																						|	Keys   	|	value Type	|	Obligatoire	|	Exemples	|
 	Case of failure : return false																						_____________________________________________________________________________________							
-																														|		min		|		number		|			No			|			25			|
-																														-------------------------------------------------------------------------------------
-																														|		max		|		number		|			No			|			35			|	
-																														-------------------------------------------------------------------------------------
-																														|		active	|		Bool		|			No			|		true || false	|
-																														-------------------------------------------------------------------------------------
+																										|	min	|	number		|	No		|	25		|
+																										-------------------------------------------------------------------------------------
+																										|	max	|	number		|	No		|	35		|	
+																										-------------------------------------------------------------------------------------
+																										|	active	|	Bool		|	No		|	true || false	|
+																										-------------------------------------------------------------------------------------
 	USE : call this method for enable ou disable one direction or change distance activation of the selected direction;
 
 
