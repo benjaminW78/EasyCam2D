@@ -1,4 +1,3 @@
-
 /*create by : winckell benjamin*/
 
 /*Easy2DCamera is a 2D camera you could use in canvas 2D
