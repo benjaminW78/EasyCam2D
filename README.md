@@ -3,6 +3,9 @@ EasyCam2D
 
 lybrary for create a 2d camera 
 
+exemple of instance of easy 2d camera 
+
+new Easy2DCamera(window.canvas,{"focusOn" : Game.players[1],"pointReferenceX" : config.canvasObject.width/2, "pointReferenceY" :config.canvasObject.height/2, "worldX" : 0 , "worldY" : 0},{ "left" : {"min" : 100, "max" : 200},"right" : {"min" : 50, "max" : 1000} , "up" : {"min" : 50, "max" : 300},"down" : {"min" : 50, "max" : 100}, "speed" : 2 });
 
 exemples of draw canvas with easy camera
 
