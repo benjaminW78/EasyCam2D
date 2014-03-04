@@ -1,3 +1,8 @@
+define(function(){
+
+
+
+
 /*create by : winckell benjamin*/
 
 /*Easy2DCamera is a 2D camera you could use in canvas 2D
@@ -119,22 +124,26 @@ return Easy2DCamera = function (canvas , spaceInfo , scrolling )
     
     Easy2DCamera.prototype._initTarget = function(params)
     {
-        var _obj = params.focusOn.split(".");
-        var _tmp = '';
-        for (var index in _obj)
-        {
-
-            if( parseInt(index , 10) === 0 )
-                _tmp = window[_obj[index]];
-            else 
+        if(typeof params.focusOn === "string")
+        {        
+            var _obj = params.focusOn.split(".");
+            var _tmp = '';
+            for (var index in _obj)
             {
-                if( !Number.isNaN(parseInt(_obj[index],10)))
-                    _tmp = _tmp[parseInt(_obj[index],10)];
-                else
-                    _tmp = _tmp[_obj[index]];
+
+                if( parseInt(index , 10) === 0 )
+                    _tmp = window[_obj[index]];
+                else 
+                {
+                    if( !Number.isNaN(parseInt(_obj[index],10)))
+                        _tmp = _tmp[parseInt(_obj[index],10)];
+                    else
+                        _tmp = _tmp[_obj[index]];
+                }
             }
         }
-        spaceInfos.myTarget = _tmp;
+        else if( typeof params.focusOn === 'object')
+            spaceInfos.myTarget = params.focusOn;
     }
 
     Easy2DCamera.prototype._initScrollingValues = function(scrolling)
@@ -357,3 +366,5 @@ return Easy2DCamera = function (canvas , spaceInfo , scrolling )
     this._initScrollingValues(scrolling);
     
 }
+
+});
