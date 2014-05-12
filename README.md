@@ -1,7 +1,7 @@
 EasyCam2D
 =========
 
-lybrary for create a 2d camera 
+library for create a 2d camera 
 
 exemple of instance of easy 2d camera 
 
